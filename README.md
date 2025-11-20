@@ -1,12 +1,12 @@
 # WhatsApp AI Bot with Google ADK
 
-A FastAPI-based WhatsApp webhook server integrated with Google's AI Development Kit (ADK) and Gemini AI. The bot responds to messages containing the trigger word "bot" with intelligent, context-aware responses powered by Gemini AI with Google Search capabilities.
+A FastAPI-based WhatsApp webhook server integrated with Google's AI Development Kit (ADK) and Gemini AI. The bot responds to messages containing the trigger word "KnghtBot" with intelligent, context-aware responses powered by Gemini AI, which incorporates Google Search capabilities.
 
 ## Features
 
 - **FastAPI Server**: Lightweight, fast webhook server
 - **WhatsApp Cloud API Integration**: Receives and sends messages via WhatsApp
-- **Google ADK Agent**: Intelligent AI agent using Gemini 2.0 with Google Search tool
+- **Google ADK Agent**: Intelligent AI agent using Gemini 2.0 with the Google Search tool
 - **Trigger Word Detection**: Only responds when "bot" is mentioned in the message
 - **Environment-based Configuration**: Secure API key management
 
@@ -57,7 +57,7 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 
 ## Example Usage
 
-User sends: "Hey bot, what's the weather in New York today?"
+User sends: "Hey KnightBot, what's the weather in New York today?"
 
 The bot will:
 1. Detect the trigger word "bot"
