@@ -140,7 +140,7 @@ def send_whatsapp_message(to: str, message: str) -> bool:
         return False
 
 
-@app.get("/whatsapp")
+@app.get("/webhook")
 async def verify_webhook(request: Request):
     """
     Webhook verification endpoint for WhatsApp.
@@ -158,7 +158,7 @@ async def verify_webhook(request: Request):
         raise HTTPException(status_code=403, detail="Verification failed")
 
 
-@app.post("/whatsapp")
+@app.post("/webhook")
 async def receive_message(request: Request):
     """
     Webhook endpoint for receiving WhatsApp messages.
