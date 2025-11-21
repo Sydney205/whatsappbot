@@ -186,15 +186,10 @@ async def receive_message(request: Request):
                             message_body = message.get("text", {}).get("body", "")
                             
                             logger.info(f"Message from {from_number}: {message_body}")
-                            
-                            if "knightbot" in message_body.lower():
-                                logger.info("Trigger word 'knightbot' detected, processing with AI agent")
                                 
-                                ai_response = await run_agent(message_body, from_number)
+                            ai_response = await run_agent(message_body, from_number)
                                 
-                                send_whatsapp_message(from_number, ai_response)
-                            else:
-                                logger.info("Trigger word not found, ignoring message")
+                            send_whatsapp_message(from_number, ai_response)
         
         return {"status": "ok"}
         
